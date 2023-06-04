@@ -1,0 +1,59 @@
+@baseUrl = https://api.carhara.com/v1
+@domain_name = dealershipone.com1jkhjkhjk
+@contentType = application/json
+@contentTypePost = application/x-www-form-urlencoded
+
+# @name login
+POST {{baseUrl}}/user/login
+Content-Type: {{contentType}}
+
+{
+    "email": "seller@gmail.com",
+    "password": "abcd1234"
+}
+
+###
+
+@token = {{login.response.body.data.token}}
+
+###
+
+# @name refreshToken
+POST {{baseUrl}}/user/refreshToken
+Content-Type: {{contentType}}
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhbGciOiJIUzI1NiIsImlkIjozLCJzdWIiOjMsImlhdCI6MTY1MDgxMTUzNywiZXhwIjoxNjUwODk3OTM3fQ.Mzz28RF-ekFZuzJYHlsXXu17iRJaRC8vNM5dR1qwuKY"
+}
+
+###
+
+# @name users
+GET {{baseUrl}}/users
+Content-Type: {{contentType}}
+Authorization: bearer {{token}}
+
+###
+
+# @name settings
+POST {{baseUrl}}/setting/theme
+Content-Type: {{contentTypePost}}
+
+{
+    "domain_name": "{{domain_name}}"
+}
+
+###
+
+@data_setting = {{settings.response.body.data}}
+
+###
+
+# @name updateSetting
+POST {{baseUrl}}/setting/update
+Content-Type: {{contentTypePost}}
+
+{
+    "domain_name": "{{domain_name}}"
+    "data": "{{data_setting}}"
+}

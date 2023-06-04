@@ -1,0 +1,123 @@
+import img1 from "../../assets/images/users/1.jpg";
+import img2 from "../../assets/images/users/2.jpg";
+import img3 from "../../assets/images/users/3.jpg";
+import img4 from "../../assets/images/users/4.jpg";
+import img5 from "../../assets/images/users/5.jpg";
+
+const Customers = [
+    {
+        id: 1,
+        imgsrc: img4,
+        name: "Nirav Joshi-9",
+        type: "LISTING PAGE",
+        Amount: "4.00 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Active",
+        created: "2022-1-1",
+
+    },
+    {
+        id: 2,
+        imgsrc: img1,
+        name: "Sunil Joshi-8",
+        type: "LISTING PAGE",
+        Amount: "6.00 $",
+        start_date: "2019-11-22",
+        end_date: "2022-11-22",
+        status: "Active",
+        created: "2022-1-1",
+    },
+    {
+        id: 3,
+        imgsrc: img2,
+        name: "Andrew McDown-7",
+        type: "LISTING PAGE",
+        Amount: "100.00 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Pending",
+        created: "2022-1-1",
+    },
+    {
+        id: 4,
+        imgsrc: img3,
+        name: "Christo Jamil-6",
+        type: "LISTING PAGE",
+        Amount: "23.00 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Completed",
+        created: "2022-1-1",
+    },
+
+    {
+        id: 5,
+        imgsrc: img5,
+        name: "Micheal Doe-5",
+        type: "LISTING PAGE",
+        Amount: "56.00 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Cancel",
+        created: "2022-1-1",
+    },
+    {
+        id: 6,
+        imgsrc: img4,
+        name: "Nirav Joshi-4",
+        type: "LISTING PAGE",
+        Amount: "80.00 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Active",
+        created: "2022-1-1",
+    },
+    {
+        id: 7,
+        imgsrc: img1,
+        name: "Sunil Joshi-3",
+        type: "LISTING PAGE",
+        Amount: "49.000 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Active",
+        created: "2022-1-1",
+    },
+    {
+        id: 8,
+        imgsrc: img2,
+        name: "Andrew McDownland-2",
+        type: "LISTING PAGE",
+        Amount: "41.00 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Pending",
+        created: "2022-1-1",
+    },
+    {
+        id: 9,
+        imgsrc: img3,
+        name: "Christopher Jamil-1",
+        type: "LISTING PAGE",
+        Amount: "4.000 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Completed",
+        created: "2022-1-1",
+    },
+
+    {
+        id: 10,
+        imgsrc: img5,
+        name: "Micheal Doe-1",
+        type: "LISTING PAGE",
+        Amount: "100.000 $",
+        start_date: "2022-11-22",
+        end_date: "2022-11-22",
+        status: "Cancel",
+        created: "2022-1-1",
+    },
+];
+
+export default Customers;

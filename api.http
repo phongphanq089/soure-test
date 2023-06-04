@@ -1,0 +1,39 @@
+@baseUrl = https://beta.carhara.com/api/v1
+
+@contentType = application/json
+
+# @name login
+POST {{baseUrl}}/user/login
+Content-Type: {{contentType}}
+
+{
+    "email": "seller@gmail.com",
+    "password": "abcd1234"
+}
+
+###
+
+@token = {{login.response.body.data.token}}
+
+###
+
+# @name refreshToken
+POST {{baseUrl}}/user/refreshToken
+Content-Type: {{contentType}}
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhbGciOiJIUzI1NiIsImlkIjozLCJzdWIiOjMsImlhdCI6MTY1MDgxMTUzNywiZXhwIjoxNjUwODk3OTM3fQ.Mzz28RF-ekFZuzJYHlsXXu17iRJaRC8vNM5dR1qwuKY"
+}
+
+###
+
+# @name users
+GET {{baseUrl}}/users
+Content-Type: {{contentType}}
+Authorization: bearer {{token}}
+
+###
+
+# @name settings
+GET {{baseUrl}}/settings
+Content-Type: {{contentType}}
